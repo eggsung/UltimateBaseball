@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace UltimateBaseball
 {
-    class Guess
+    class Guess : Foo
     {
-        private int[] _numbers;
-        
+        protected override string GetShowText()
+        {
+           return "> 공격수가 고른 숫자";
+        }
         public void Input()
         {
             _numbers = new int[3];
@@ -25,23 +27,11 @@ namespace UltimateBaseball
             }
         }
 
-        public void Show()
-        {
-            Console.WriteLine("> 공격수가 고른 숫자");
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine(_numbers[i]);
-            }
-        }
-
+       
         public bool IsInvaild()
         {
             return _numbers[0] == _numbers[1] || _numbers[0] == _numbers[2] || _numbers[1] == _numbers[2];
         }
 
-        public int Get(int index)
-        {
-            return _numbers[index];
-        }
     }
 }

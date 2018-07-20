@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace UltimateBaseball
 {
-    class Answer
+    class Answer : Foo
     {
-        private int[] _numbers;
-
+        protected override string GetShowText()
+        {
+            return "> 컴퓨터가 생성한 정답";
+        }
         public void Generate()
         {
             Random random = new Random();
@@ -35,10 +37,6 @@ namespace UltimateBaseball
                 }
             }
         }
-        
-        public int Get(int index)
-        {
-            return _numbers[index];
-        }
+
     }
 }
