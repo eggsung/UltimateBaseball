@@ -6,6 +6,7 @@ namespace UltimateBaseball
     {
         static void Main(string[] args)
         {
+            // 환영메시지 출력
             Console.WriteLine("+-------------------------------------------------------+");
 			Console.WriteLine("|\t\t궁극의 숫자 야구 게임\t\t\t|");
 			Console.WriteLine("+-------------------------------------------------------+");
